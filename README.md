@@ -47,114 +47,20 @@ A secure REST API for storing and managing text notes. Built with **Node.js**, *
 
 ---
 
-## 🚀 API Documentation
 
-After starting the server, open:
+## 🔐 Authentication
 
-```text
-http://localhost:3000/api-docs
-```
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/auth/register` | Register a new user |
+| POST | `/api/auth/login` | Authenticate a user and return a JWT |
+| POST | `/api/auth/logout` | Logout the current user |
 
-Swagger UI allows you to test all endpoints without using Postman.
+## 📝 Notes
 
----
-
-# 📌 API Endpoints
-
-## Authentication
-
-### Register
-
-**POST**
-
-```http
-/api/auth/register
-```
-
-Creates a new user account.
-
----
-
-### Login
-
-**POST**
-
-```http
-/api/auth/login
-```
-
-Authenticates a user and returns a JWT.
-
----
-
-### Logout
-
-**POST**
-
-```http
-/api/auth/logout
-```
-
-Logs out the currently authenticated user.
-
----
-
-## Notes
-
-### Get All Notes
-
-**GET**
-
-```http
-/api/notes
-```
-
-Returns all notes created by the authenticated user.
-
----
-
-### Create Note
-
-**POST**
-
-```http
-/api/notes
-```
-
-Creates a new note.
-
----
-
-### Get Note by ID
-
-**GET**
-
-```http
-/api/notes/:id
-```
-
-Returns a specific note.
-
----
-
-### Update Note
-
-**PUT**
-
-```http
-/api/notes/:id
-```
-
-Updates an existing note.
-
----
-
-### Delete Note
-
-**DELETE**
-
-```http
-/api/notes/:id
-```
-
-Permanently deletes a note.
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/notes` | Get all notes |
+| POST | `/api/notes` | Create a new note |
+| PUT | `/api/notes/:id` | Update an existing note |
+| DELETE | `/api/notes/:id` | Delete a note |
