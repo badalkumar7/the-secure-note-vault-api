@@ -4,10 +4,10 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 
-RUN npm ci --only=production
+RUN npm install --omit=production
 
 COPY . .
 
-EXPOSE 3000
+EXPOSE 10000
 
 CMD ["node", "app.js"]
