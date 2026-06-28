@@ -29,8 +29,8 @@ const swaggerOptions = {
         },
         servers: [
             {
-                url: `http://localhost:${config.port}`,
-                description: "Local development server",
+                url: `https://the-secure-note-vault-api.onrender.com`,
+                description: "Production Live Server",
             },
         ],
         components: {
