@@ -11,7 +11,7 @@ const noteRoutes = require("./routes/noteRoutes");
 
 const app = express();
 
-connectDB();
+
 
 
 app.use(express.json());
@@ -61,6 +61,8 @@ app.use("/api/auth", authRoutes);
 app.use("/api/notes", noteRoutes);
 
 
-app.listen(config.port, () => {
-    console.log(`Server running on port ${config.port}`);
+connectDB().then(()=>{
+      app.listen(config.port, () => {
+      console.log(`Server running on port ${config.port}`);
+    });
 });
